@@ -18,6 +18,12 @@ public class Exercicio2 {
 		
 		System.out.println( "Ponto fim" );
 		System.out.println( fim );
+		
+		String[] dias = {"seg","ter","qua","qui","sex"};
+		
+		for( String diaSemana : dias ){
+			System.out.println( diaSemana );
+		}
 
 	}
 

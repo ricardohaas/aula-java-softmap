@@ -7,4 +7,8 @@ public class Ponto {
 	public String toString(){
 		return "p("+ this.x +"," +this.y + ")";
 	}
+	
+	public Ponto(){
+		
+	}
 }
