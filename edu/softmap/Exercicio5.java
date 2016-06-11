@@ -8,8 +8,8 @@ public class Exercicio5 {
 	
 	public static void main(String[] args) {
 		int numberFromUser = getNumberFromUser();
-		
-		System.out.println( isPrimo( numberFromUser ) ? "É primo!" : "Não é primo!" );
+		Primo primo = new Primo();
+		System.out.println( primo.isPrimo( numberFromUser ) ? "É primo!" : "Não é primo!" );
 	}
 	
 	public static int getNumberFromUser(){
@@ -36,14 +36,6 @@ public class Exercicio5 {
 		return numberFromUser;
 	}
 	
-	public static boolean isPrimo( int number){
-		for( int i = 2; i < number ; i++ ){
-			if( number % i == 0 ){
-				System.out.println( "É divisível por " + i + " também" );
-				return false;
-			}
-		}
-		return true;
-	}
+	
 
 }
