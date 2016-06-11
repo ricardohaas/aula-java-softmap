@@ -1,6 +1,5 @@
 package edu.softmap;
 
-import helloTestUnitario.HelloJavaSoma;
 import junit.framework.TestCase;
 
 public class Exercicio5Test extends TestCase {
