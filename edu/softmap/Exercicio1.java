@@ -1,6 +1,6 @@
 package edu.softmap;
 
-public class HelloJava {
+public class Exercicio1 {
 	
 	/**
 	 * 
