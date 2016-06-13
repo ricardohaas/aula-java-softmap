@@ -5,8 +5,8 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class Exercicio4 {
-	static int minNumber = 1;
-	static int maxNumber = 1000;
+	static final int MIN_NUMBER = 1;
+	static final int MAX_NUMBER = 1000;
 	
 	public static void main(String[] args) {
 		int numberFromUser = getNumberFromUser();
@@ -19,7 +19,7 @@ public class Exercicio4 {
 			isEven = false;
 		}
 		
-		for( int i = minNumber; i < maxNumber; i++ ){
+		for( int i = MIN_NUMBER; i < MAX_NUMBER; i++ ){
 			if( isEven &&  i < numberFromUser && ( i %2 == 0 )  ){
 				System.out.println( i );
 			}
@@ -34,7 +34,7 @@ public class Exercicio4 {
 		int numberFromUser = 0;
 		while( true ){
 			
-			String dadoUsuario = JOptionPane.showInputDialog("Digite um número entre " + minNumber + " e " + maxNumber );
+			String dadoUsuario = JOptionPane.showInputDialog("Digite um número entre " + MIN_NUMBER + " e " + MAX_NUMBER );
 			
 			try{
 				numberFromUser = Integer.parseInt( dadoUsuario );
@@ -43,7 +43,7 @@ public class Exercicio4 {
 				System.out.println(ex );
 			}
 			
-			if( numberFromUser > minNumber && numberFromUser < maxNumber ){
+			if( numberFromUser > MIN_NUMBER && numberFromUser < MAX_NUMBER ){
 				System.out.println("Informado o número "+ numberFromUser + ". Número OK.");
 				break;
 			}
