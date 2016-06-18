@@ -2,6 +2,9 @@ package edu.softmap;
 
 //Exercicio 8
 public class Media {
+	/**
+	 * Recebe 5 notas e retorn a média
+	 */
 	public static void main(String[] args ){
 		int notas[] = new int[5];
 		
