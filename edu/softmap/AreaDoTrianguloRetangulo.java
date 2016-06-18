@@ -1,12 +1,12 @@
 package edu.softmap;
 
 public class AreaDoTrianguloRetangulo {
-	int base;
-	int altura;
+	double base;
+	double altura;
 	double area;
 	double hipotenusa;
 	
-	public AreaDoTrianguloRetangulo( int base, int altura){
+	public AreaDoTrianguloRetangulo( double base, double altura){
 		this.base = base;
 		this.altura = altura;
 		this.calculateArea();
