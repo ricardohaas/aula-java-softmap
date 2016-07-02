@@ -3,6 +3,10 @@ package edu.softmap.corpohumano;
 public class Cerebro {
 	private Cabeca cabeca;
 	
+	public Cerebro(Cabeca cabeca) {
+		this.cabeca = cabeca;
+	}
+
 	public void mexerDedaoPeDireito() {
 		System.out.println( "Pensamento de mexer o dedao pé direito" );
 		cabeca.getTronco().getPernaDireita().getPe().mexerDedao();
@@ -29,6 +33,10 @@ public class Cerebro {
 
 	public void setCabeca(Cabeca cabeca) {
 		this.cabeca = cabeca;
+	}
+
+	public void sentir( ParteCorpo parteCorpo, String sensacao) {
+		System.out.println( "Recebida a sensação " + sensacao + " no " + parteCorpo.getNome());
 	}
 
 }

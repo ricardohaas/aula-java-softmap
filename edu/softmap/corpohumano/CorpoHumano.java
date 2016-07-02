@@ -1,24 +1,14 @@
 package edu.softmap.corpohumano;
 
+
 public class CorpoHumano {
 	private Cabeca cabeca;
 	private Tronco tronco;
 	
 	public CorpoHumano(){
-		this.criarCabeca();
-		this.criarTronco();
-	}
-	
-	private void criarTronco() {
-		this.tronco = new Tronco();
-		this.cabeca.setTronco( tronco );
-	}
-
-	private void criarCabeca() {
 		this.cabeca = new Cabeca();
-		Cerebro cerebro = new Cerebro();
-		cerebro.setCabeca( this.cabeca );
-		this.cabeca.setCerebro( cerebro );
+		this.tronco = new Tronco( this.cabeca );
+		this.cabeca.setTronco( tronco );
 	}
 
 	public Cabeca getCabeca() {

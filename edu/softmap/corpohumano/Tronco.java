@@ -1,16 +1,18 @@
 package edu.softmap.corpohumano;
 
 public class Tronco {
+	private Cabeca cabeca;
 	private MembroSuperior bracoEsquerdo;
 	private MembroSuperior bracoDireito;
 	private MembroInferior pernaEsquerda;
 	private MembroInferior pernaDireita;
 	
-	public Tronco(){
-		bracoDireito = new MembroSuperior("Direito");
-		bracoEsquerdo = new MembroSuperior("Esquerdo");
-		pernaDireita = new MembroInferior( "Direito" );
-		pernaEsquerda = new MembroInferior( "Esquerdo" );
+	public Tronco(Cabeca cabeca){
+		this.setCabeca(cabeca);
+		bracoDireito = new MembroSuperior(this, "Direito");
+		bracoEsquerdo = new MembroSuperior(this, "Esquerdo");
+		pernaDireita = new MembroInferior( this, "Direito" );
+		pernaEsquerda = new MembroInferior( this, "Esquerdo" );
 	}
 	
 	public MembroSuperior getBracoEsquerdo() {
@@ -43,5 +45,13 @@ public class Tronco {
 	
 	public void setPernaDireita(MembroInferior pernaDireita) {
 		this.pernaDireita = pernaDireita;
+	}
+
+	public Cabeca getCabeca() {
+		return cabeca;
+	}
+
+	public void setCabeca(Cabeca cabeca) {
+		this.cabeca = cabeca;
 	}
 }

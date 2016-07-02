@@ -1,9 +1,13 @@
 package edu.softmap.corpohumano;
 
+
 public class Cabeca {
 	private Cerebro cerebro;
 	private Tronco tronco;
-
+	
+	public Cabeca(){
+		this.cerebro = new Cerebro( this );
+	}
 	public Cerebro getCerebro() {
 		return cerebro;
 	}

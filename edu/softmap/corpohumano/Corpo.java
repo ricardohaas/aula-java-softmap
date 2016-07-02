@@ -10,7 +10,8 @@ public class Corpo {
 		frank.getCabeca().getCerebro().mexerDedaoPeEsquerdo();
 		frank.getCabeca().getCerebro().mexerDedaoMaoDireito();
 		frank.getCabeca().getCerebro().mexerDedaoMaoEsquerda();
-
+		
+		frank.getTronco().getPernaDireita().getPe().receberSensacao( "Frio" );
 	}
 
 }

@@ -1,10 +1,12 @@
 package edu.softmap.corpohumano;
 
-public class Pe {
+public class Pe implements ParteCorpo{
+	private MembroInferior membroInferior;
 	private int tamanho;
 	private String lado;
 
-	public Pe(String lado, int tamanho) {
+	public Pe(MembroInferior membroInferior, String lado, int tamanho) {
+		this.membroInferior = membroInferior;
 		this.lado = lado;
 		this.tamanho = tamanho;
 	}
@@ -27,5 +29,23 @@ public class Pe {
 	
 	public void mexerDedao(){
 		System.out.println( "Mexeu o dedao do pé " + lado );
+	}
+
+	public MembroInferior getMembroInferior() {
+		return membroInferior;
+	}
+
+	public void setMembroInferior(MembroInferior membroInferior) {
+		this.membroInferior = membroInferior;
+	}
+	
+	public void receberSensacao( String sensacao){
+		System.out.println( "Sensacao "+ sensacao +" no pé "+ lado );
+		membroInferior.getTronco().getCabeca().getCerebro().sentir( this,sensacao );
+	}
+
+	@Override
+	public String getNome() {
+		return "Pé " + lado;
 	}
 }
