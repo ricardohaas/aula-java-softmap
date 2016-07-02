@@ -19,7 +19,7 @@ public class InterfaceMain {
 		System.out.println( "Tentando autenticar com a senha qwerty:");
 		System.out.println( a.autentica("qwerty") == true ? "Sucesso" : "Falha"  );
 		
-		System.out.println( "Tentando autenticar com a senha 1234:");
+		System.out.println( "Tentando autenticar com a senha 1234:                                                                                                                 ");
 		System.out.println( a.autentica("1234") == true ? "Sucesso" : "Falha"  );
 	}
 
