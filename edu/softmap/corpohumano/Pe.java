@@ -1,6 +1,6 @@
 package edu.softmap.corpohumano;
 
-public class Pe implements ParteCorpo{
+public class Pe implements ParteCorpo, Tateavel{
 	private MembroInferior membroInferior;
 	private int tamanho;
 	private String lado;
@@ -39,6 +39,7 @@ public class Pe implements ParteCorpo{
 		this.membroInferior = membroInferior;
 	}
 	
+	@Override
 	public void receberSensacao( String sensacao){
 		System.out.println( "Sensacao "+ sensacao +" no pé "+ lado );
 		membroInferior.getTronco().getCabeca().getCerebro().sentir( this,sensacao );
@@ -48,4 +49,5 @@ public class Pe implements ParteCorpo{
 	public String getNome() {
 		return "Pé " + lado;
 	}
+
 }
