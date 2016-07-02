@@ -7,6 +7,21 @@ public class Cerebro {
 		System.out.println( "Pensamento de mexer o dedao pé direito" );
 		cabeca.getTronco().getPernaDireita().getPe().mexerDedao();
 	}
+	
+	public void mexerDedaoPeEsquerdo() {
+		System.out.println( "Pensamento de mexer o dedao pé esquerdo" );
+		cabeca.getTronco().getPernaEsquerda().getPe().mexerDedao();
+	}
+	
+	public void mexerDedaoMaoDireito() {
+		System.out.println( "Pensamento de mexer o dedao mão direita" );
+		cabeca.getTronco().getBracoDireito().getMao().mexerDedao();
+	}
+	
+	public void mexerDedaoMaoEsquerda() {
+		System.out.println( "Pensamento de mexer o dedao mão esquerda" );
+		cabeca.getTronco().getBracoEsquerdo().getMao().mexerDedao();
+	}
 
 	public Cabeca getCabeca() {
 		return cabeca;

@@ -4,6 +4,11 @@ public class Pe {
 	private int tamanho;
 	private String lado;
 
+	public Pe(String lado, int tamanho) {
+		this.lado = lado;
+		this.tamanho = tamanho;
+	}
+
 	public String getLado() {
 		return lado;
 	}
