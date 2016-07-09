@@ -9,7 +9,7 @@ public class Peao extends PecaXadrez{
 	
 	@Override
 	public boolean valida(int linha, int coluna) {
-		if( linha < 2 || linha > 8 ){
+		if( linha < 2 ){
 			return false;
 		}
 

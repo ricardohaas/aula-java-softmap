@@ -9,9 +9,6 @@ public class Torre extends PecaXadrez{
 	
 	@Override
 	public boolean valida(int linha, int coluna) {
-		if( linha < 1 || linha > 8 || coluna < 1 || coluna > 8 ){
-			return false;
-		}
 
 		if( linha == this.linha && coluna != this.coluna ){
 			return true;
