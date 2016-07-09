@@ -5,10 +5,25 @@ abstract class Conta {
 	private int numero;
 	private double saldo;
 	
-	abstract void deposito( double valor );
-	abstract void saque( double valor );
 	abstract boolean temSaldo( double valor );
-	abstract void mostrarSaldo();
+	
+	void deposito( double valor) {
+		this.setSaldo(getSaldo() + valor);
+	}
+
+	void saque(double valor) {
+		if( temSaldo( valor )){
+			System.out.println( "Debitado " + valor + " da conta "+ getNumero());
+			this.setSaldo(getSaldo() - valor);
+		}
+		else{
+			System.out.println( "Não debitado por falta de saldo");
+		}
+	}
+	
+	void mostrarSaldo() {
+		System.out.println( getSaldo() );
+	}
 	
 	public double getSaldo() {
 		return saldo;
@@ -27,5 +42,9 @@ abstract class Conta {
 	}
 	public void setCliente(String cliente) {
 		this.cliente = cliente;
+	}
+	
+	public String toString(){
+		return "Cliente: " + getCliente() + "\r\n" + "Numero: "+ getNumero() + "\r\n" + "Saldo: " + getSaldo();
 	}
 }
