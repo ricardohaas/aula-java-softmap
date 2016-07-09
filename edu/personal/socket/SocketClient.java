@@ -12,7 +12,7 @@ public class SocketClient {
 
 	     System.out.println("O cliente se conectou ao servidor!");
 
-	     Scanner teclado = new Scanner(System.in);
+	     Scanner teclado = new Scanner( System.in );
 	     PrintStream saida = new PrintStream(cliente.getOutputStream());
 	     Scanner socketInputStream = new Scanner(cliente.getInputStream());
 	     

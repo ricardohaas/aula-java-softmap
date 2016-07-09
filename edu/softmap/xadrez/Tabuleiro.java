@@ -1,0 +1,18 @@
+package edu.softmap.xadrez;
+
+public class Tabuleiro {
+	public static void main( String[] args ){
+		System.out.println("Peao");
+		Peao peao = new Peao(1,2);
+		peao.move(2, 2);
+		System.out.println( peao );
+		peao.move(3, 2);
+		System.out.println( peao );
+		
+		System.out.println("Torre");
+		Torre torre = new Torre(1,1);
+		torre.move( 1, 8);
+		torre.move( 8, 8);
+		torre.move( 7, 7);
+	}
+}
