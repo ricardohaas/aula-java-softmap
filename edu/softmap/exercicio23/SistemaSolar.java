@@ -54,8 +54,7 @@ public class SistemaSolar {
 		
 		Planeta meuPlaneta = sistema.criarPlaneta("Terra",3000);
 		
-		for( int i = 0; i < sistema.planetas.size() ; i++ ){
-			Planeta planeta = sistema.planetas.get( i );
+		for( Planeta planeta : sistema.planetas ){
 			System.out.println( planeta );
 			if( meuPlaneta.equals( planeta) ){
 				System.out.println("Encontrei meu planeta" + planeta );
